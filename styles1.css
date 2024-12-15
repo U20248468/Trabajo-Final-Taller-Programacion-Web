@@ -1,0 +1,440 @@
+/*transiciones en la pag principal*/
+h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 3rem; 
+    color: #222; 
+    border: 2px solid #00aaff; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    background-color: #f9f9f9; 
+    transition: color 0.3s ease, transform 0.3s ease; /* Añadimos la transición */
+}
+
+h1:hover {
+    color: #00aaff; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* pag laptop*/
+
+
+.animacion{
+	
+	font-size: 2.6rem;
+	text-transform: capitalize;
+	text-shadow:1px 1px 1px blue;
+	animation-duration:1.5s;
+	animation-name: slidein;
+
+
+	}
+	@keyframes slidein{
+	
+		from{
+			margin-left:100%;
+			width:300%;
+		}
+		
+		to{
+			margin-left:0%;
+
+			width:100%;
+		}
+		
+	}
+	
+	.transicion{
+
+		width:100px;
+		height:100px;
+		background:#00aaff;
+		transition:
+		width 0.5s;
+		}
+		
+.transicion:hover {
+
+		width: 400px;
+		background	:#a855f7;
+}
+	
+	/*Uso de los flexbox*/
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los productos se ajusten en múltiples filas */
+    padding: 20px;
+    gap: 20px;
+}
+
+.producto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 23%; /* Ajusta a 23% para 4 productos por fila en pantallas grandes */
+    height: auto; /* Permitir que la altura sea automática */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+
+.producto h2 {
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1rem;
+	font-style: italic;
+    color: black;
+}
+	
+
+ .producto img {
+            max-width: 100%; /* Imagen ajustada al contenedor */
+            height: auto; /* Mantener la proporción de la imagen */
+			transition:transform 0.3s ease;
+        }
+ .producto img:hover {
+            
+			 transform: scale(1.2);
+        }
+
+@media screen and (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 90%;
+    }
+
+    .ventana-flotante {
+        width: 90%;
+        max-width: 500px;
+        padding: 10px;
+    }
+}
+
+/* Tablet View (Medium screens) */
+@media screen and (max-width: 768px) {
+    .productos {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .producto {
+        width: 45%; /* Dos productos por fila */
+    }
+}
+
+/* Desktop View (Large screens) */
+@media screen and (min-width: 1024px) {
+    .productos {
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        width: 23%; /* 4 productos por fila */
+    }
+}
+	
+	
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+	transition: transform 0.2s ease;
+	
+}
+button:hover {
+    background-color: #0088cc;
+	transform: scale(1.2); 
+}
+
+
+/*Uso de los flexbox*/
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 20px;
+    gap: 20px;
+	
+}
+
+.producto {
+		background: white; /* Color de fondo del producto */
+        border: 1px solid #ddd; /* Bordes de los productos */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del producto */
+        margin: 10px; /* Espacio alrededor del producto */
+        padding: 15px; /* Espacio interno */
+        text-align: center; /* Centrar texto */
+        width: 200px; /* Ancho fijo del producto */
+	
+}
+ .producto img {
+            max-width: 100%; /* Imagen ajustada al contenedor */
+            height: auto; /* Mantener la proporción de la imagen */
+			transition:transform 0.3s ease;
+        }
+ .producto img:hover {
+            
+			 transform: scale(1.2);
+        }
+
+/*---------------------pag ofertas---------------------------------------*/
+
+.animacionOfertas{
+	
+	font-size: 2.6rem;
+	text-transform: capitalize;
+	text-shadow:1px 1px 1px green;
+	animation-duration:1.5s;
+	animation-name: slideinO;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	}
+	@keyframes slideinO{
+	
+		from{
+			margin-left:100%;
+			width:300%;
+		}
+		
+		to{
+			margin-left:0%;
+
+			width:100%;
+		}
+		75%
+		{
+			font-size:300%
+			margin-left:25%
+			width:150%
+			
+			
+		}
+		
+	}
+	
+
+.animacionOfertas{
+	transition: transform 0.5s ease;
+	
+}
+
+.animacionOfertas:hover{
+	transform: translateY(-10px) rotate(-5deg); /
+	
+}
+
+.carrito-lista {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 250px;
+    display: none; /* Oculta por defecto */
+    z-index: 1000;
+}
+
+button.botoninfo{
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.ventana-flotante {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Esto centra la ventana flotante */
+    width: 80%; /* Puedes ajustar el tamaño */
+    max-width: 600px; /* Máximo ancho para la ventana flotante */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.ventana-flotante > span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.ventana-flotante h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ventana-flotante p {
+    color: white;
+    font-size: 16px;
+}
+
+/* Estilo para el fondo oscuro que cubre toda la pantalla */
+.ventana-flotante::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1; /* Asegura que el fondo oscuro esté detrás del contenido */
+}
+
+       .menu-navegacion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los enlaces se acomoden en varias líneas si es necesario */
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1; /* Ocupa el espacio disponible */
+    justify-content: flex-end;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px; /* Ancho inicial */
+    transition: width 0.3s; /* Suaviza el cambio de tamaño */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Iconos de usuario y carrito */
+.user-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .menu-navegacion {
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 150px; /* Reduce el ancho */
+    }
+
+    .user-cart {
+        gap: 5px; /* Reduce el espacio entre los íconos */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: flex-start;
+    }
+
+    .menu-hamburguesa {
+        display: block; /* Muestra el menú hamburguesa */
+    }
+
+    .menu-navegacion {
+        display: none; /* Oculta el menú de navegación inicialmente */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .menu-navegacion.active {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    .search-bar {
+        justify-content: flex-start; /* Alinea la barra de búsqueda al inicio */
+        width: 100%; /* Ocupa todo el ancho */
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Barra de búsqueda ocupa todo el espacio disponible */
+    }
+
+    .user-cart {
+        justify-content: flex-end; /* Alinea los íconos a la derecha */
+        width: 100%; /* Ocupa toda la línea */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Ajusta la barra de búsqueda al 100% */
+    }
+
+    .user-cart {
+        justify-content: center; /* Centra los íconos en pantallas muy pequeñas */
+    }
+}

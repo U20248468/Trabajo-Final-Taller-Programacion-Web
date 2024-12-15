@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureByte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body class="bl">
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="FutureByte Logo" class="logo-img">
+            <a href="Avance1.html">FutureByte</a>
+        </div>
+
+		<div class="menu-hamburguesa" onclick="toggleMenu()">&#9776;</div>
+		
+        <nav class="menu-navegacion">
+            <a href="paglaptops.html">Laptops</a>
+            <a href="pagsmartphones.html">Smartphones</a>
+            <a href="pagaccesorios.html">Accesorios</a>
+            <a href="pagcomponentes.html">Componentes</a>
+            <a href="pagofertas.html">Ofertas</a>
+        </nav>
+		
+		
+		
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <!-- Iconos de usuario y carrito -->
+<div class="user-cart">
+    <a href="#" id="carrito">Carrito (0)</a>
+    <ul id="listaCarrito" class="carrito-lista oculto">
+        <!-- Aquí se mostrarán los productos añadidos al carrito -->
+    </ul>
+</div>
+    </header>
+
+    <p class="animacionOfertas">
+        ¡¡¡OFERTAS!!
+    </p>
+    
+    <p class="transicion">
+        ¡LAS OFERTAS DE ESTA SEMANA!
+    </p>
+    
+<section class="productos">
+    <div class="producto">
+        <img src="hp1.jpg" alt="Laptop HP Pavilion 15-eg2522la">
+        <h2>Laptop HP Pavilion 15-eg2522la</h2>
+        <p>S/10.00</p>
+        <button class="botoncomprar">Comprar</button>
+        <button onclick="mostrarVentana('Laptop HP Pavilion 15-eg2522la')" class="botoninfo">Más información</button>
+    </div>
+    <div class="producto">
+        <img src="hp2.jpg" alt="Laptop HP 15-fc0006la R3-7320U">
+        <h2>Laptop HP 15-fc0006la R3-7320U</h2>
+        <p>S/15.00</p>
+        <button class="botoncomprar">Comprar</button>
+        <button onclick="mostrarVentana('Laptop HP 15-fc0006la R3-7320U')" class="botoninfo">Más información</button>
+    </div>
+    <div class="producto">
+        <img src="hp3.jpg" alt="Laptop Victus Gaming 15-fb2019la">
+        <h2>Laptop Victus Gaming 15-fb2019la</h2>
+        <p>S/20.00</p>
+        <button class="botoncomprar">Comprar</button>
+        <button onclick="mostrarVentana('Laptop Victus Gaming 15-fb2019la')" class="botoninfo">Más información</button>
+    </div>
+    <div class="producto">
+        <img src="hp4.jpg" alt="Laptop HP OMEN Transcend 14-fb0001la">
+        <h2>Laptop HP OMEN Transcend 14-fb0001la</h2>
+        <p>S/25.00</p>
+        <button class="botoncomprar">Comprar</button>
+        <button onclick="mostrarVentana('Laptop HP Pavilion 15-eg2522la')" class="botoninfo" >Más información</button>
+    </div>
+	
+	    <div id="ventana-flotante" class="ventana-flotante">
+        <span onclick="cerrarVentana()">×</span>
+        <h2 id="ventana-titulo"></h2>
+        <p id="ventana-contenido"></p>
+    </div>
+	
+	<div id="ventana-historial-nueva" class="ventana-flotante">
+    <span class="cerrar" onclick="cerrarVentanaHistorial()">X</span>
+    <h2>Historial de Compras</h2>
+    <ul id="historial-lista"></ul>
+    <p id="precio-total"></p>
+    <button id="boton-comprar">Comprar</button>
+    <button id="boton-cancelar-compra">Cancelar compra</button>
+</div>
+
+</section>
+
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Sección de información de la empresa -->
+        <div class="footer-section about">
+            <h2>Sobre FutureByte</h2>
+            <p>FutureByte es tu tienda de tecnología de confianza. Ofrecemos los últimos productos en laptops, smartphones, accesorios y componentes para que disfrutes de la mejor experiencia tecnológica.</p>
+            <p><strong>Teléfono:</strong> +1 800 123 456</p>
+            <p><strong>Email:</strong> soporte@futurebyte.com</p>
+            <p><strong>Dirección:</strong> Av. Tecnológica 123, Ciudad Tech, Arequipa</p>
+        </div>
+
+        <!-- Enlaces útiles -->
+        <div class="footer-section links">
+            <h2>Enlaces útiles</h2>
+            <ul>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Centro de Soporte</a></li>
+                <li><a href="#">Devoluciones</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección de redes sociales -->
+        <div class="footer-section social-media">
+            <h2>Síguenos</h2>
+            <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+        </div>
+    </div>
+
+    <!-- Derechos de autor -->
+    <div class="footer-bottom">
+        &copy; 2024 FutureByte | Todos los derechos reservados.
+    </div>
+
+</footer>
+
+</html>
+
+
